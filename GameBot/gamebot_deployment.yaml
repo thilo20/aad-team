@@ -46,7 +46,7 @@ spec:
             protocol: TCP
         readinessProbe:
           httpGet:
-            path: /
+            path: /health
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 5
@@ -56,6 +56,6 @@ spec:
           - name: "PICK_STRATEGY"
             value: "RANDOM"
           - name: "FF_BETS"
-            value: "1"
+            value: "true"
           - name: "APPINSIGHTS_INSTRUMENTATIONKEY"
             value: "2e9f6c29-0409-4576-9d0e-cb15a60148b5"
