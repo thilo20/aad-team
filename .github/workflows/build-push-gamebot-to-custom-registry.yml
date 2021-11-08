@@ -13,10 +13,10 @@ on:
     branches-ignore:
       - '**'
     
-    #branches: [ master ]
-    #paths:
-    #  - GameBot/**
-    #  - .github/workflows/build-push-gamebot.yml
+    branches: [ master ]
+    paths:
+      - GameBot/**
+      - .github/workflows/build-push-gamebot.yml
   workflow_dispatch:
    
 defaults:
