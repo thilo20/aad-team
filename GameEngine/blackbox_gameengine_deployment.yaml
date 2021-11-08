@@ -57,6 +57,13 @@ spec:
       - name: blackboxgameengine
         image: ghcr.io/azure-adventure-day/azure-adventure-day-coach/gamedayengine-web:latest
         imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+          requests:
+            cpu: "1"
+            memory: "512Mi"
         ports:
           - containerPort: 80
             name: gameengine

@@ -4,9 +4,9 @@ metadata:
   name: blackboxgameengine
 spec:
   maxReplicas: 10 # define max replica count
-  minReplicas: 3  # define min replica count
+  minReplicas: 6  # define min replica count
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: blackboxgameengine
-  targetCPUUtilizationPercentage: 50 # target CPU utilization
+  targetCPUUtilizationPercentage: 40 # target CPU utilization
