@@ -16,7 +16,7 @@ on:
     branches: [ master ]
     paths:
       - GameBot/**
-      - .github/workflows/build-push-gamebot.yml
+      - .github/workflows/build-push-gamebot-to-custom-registry.yml
   workflow_dispatch:
    
 defaults:
