@@ -10,8 +10,8 @@ name: Build and Push GameBot
 on:
   push:    
     # deactivated for now - has to be enabled by team
-    branches-ignore:
-      - '**'
+    # branches-ignore:
+    #  - '**'
     
     branches: [ master ]
     paths:
