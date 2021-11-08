@@ -21,6 +21,34 @@ const pick = async (req, res) => {
         result.text = "paper";
         result.bet = 10;
     }
+    else if (turn > 0) {
+        strategyOption = "CUSTOM";
+        var moves = req.body.TurnsPlayer1Values;
+        if(moves.length > 0) {
+            var lastMove = moves[moves.length-1];
+            switch(lastMove) {
+              // for game rules / winning strategy: see phase guide intro image (tablet)
+              case "rock":
+                result.text = "paper";
+                break;
+              case "paper":
+                result.text = "scissors";
+                break;
+              case "scissors":
+                result.text = "rock";
+                break;
+              case "metal":
+                result.text = "rock";
+                break;
+              case "snap":
+                result.text = "metal";
+                break;
+              default:
+                // nothing
+            }
+            result.bet = 10;
+        }
+    }
 
     console.log('Against ' + player1Name + ', strategy ' + strategyOption + '  played ' + result.text);
 
