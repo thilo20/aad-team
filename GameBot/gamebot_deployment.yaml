@@ -34,11 +34,11 @@ spec:
       labels:
         name: gamebot        
     spec:
-      # imagePullSecrets:
-      #   - name: teamregistry
+      imagePullSecrets:
+      - name: team10acr63c858
       containers:
       - name: gamebot
-        image: ghcr.io/azure-adventure-day/azure-adventure-day-coach/gamebot:latest
+        image: team10acr63c858.azurecr.io/gamebot:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
