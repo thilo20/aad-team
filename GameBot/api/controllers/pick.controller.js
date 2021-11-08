@@ -19,6 +19,7 @@ const pick = async (req, res) => {
     if (player1Name == "Brain") {
         strategyOption = "CUSTOM";
         result.text = "paper";
+        result.bet = 10;
     }
 
     console.log('Against ' + player1Name + ', strategy ' + strategyOption + '  played ' + result.text);
