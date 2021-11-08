@@ -17,6 +17,7 @@ on:
     #paths:
     #  - GameBot/**
     #  - .github/workflows/build-push-gamebot.yml
+  workflow_dispatch:
    
 defaults:
   run:
